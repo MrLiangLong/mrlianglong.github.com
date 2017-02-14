@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{margin: 0px;padding: 0px;}
+        body{background: #000000;}
+        #text-top{position: absolute;left: 30%;top: 20px;z-index: 4}
+        #text-top p{color: #33ff66;font-size: 12px;text-align: center;}
+        #container{position:absolute;left: 0;top: 0;z-index: 0;}
+        #container .lighting{position: absolute;left:150px;;top: 0;display: none;}
+        #frame{background: url("img/frame.png") no-repeat;width: 545px;height: 629px;z-index: 2;
+        position: absolute;left: 280px;top:100px;overflow: hidden;}
+        #pic_box{position: relative;left: 91px;top: 84px;width: 367px;height: 460px;z-index: 1;overflow: hidden;}
+        #pic_box .face{position: relative;left: 0;top: 0;z-index: 0}
+        #head{height: 172px;}
+        #eyes{height: 79px;}
+        #nose{height: 86px;}
+        #mouth{height: 117px;}
+    </style>
+    <script src="jquery-1.10.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var w=367;var m=10;
+            goLighting();
+            window.onblur=stopLighting;
+            window.onfocus=goLighting;
+            var int1,int2,int3;
+            function goLighting(){
+                int1=setInterval(function(){
+                    lighting_one();
+                },4000);
+                int2=setInterval(function(){
+                    lighting_two();
+                },5000);
+                int3=setInterval(function(){
+                    lighting_three();
+                },7000);
+            }
+            function stopLighting(){
+                window.clearInterval(int1);
+                window.clearInterval(int2);
+                window.clearInterval(int3);
+            }
+
+            $("#btnRandom").click(randomize);
+            $("#btnReset").click(reset);
+            function randomize(){
+                $(".face").each(function(index){
+                    var target_position=getRandom(m);
+                    var current_position=clix[index];
+                    clix[index]=target_position;
+                    if(target_position>current_position){
+                        var move_to=(target_position-current_position)*w;
+                        $(this).animate({left:"-="+move_to+"px"},500);
+                    }else if(target_position<current_position){
+                        var move_to=(current_position-target_position)*w;
+                        $(this).animate({left:"+="+move_to+"px"},500);
+                    }else{}
+                })
+            }
+            function reset(){
+                $(".face").each(function(index){
+                    clix[index]=0;
+                    $(this).animate({left:"0px"},500);
+                });
+            }
+
+            var clix=[0,0,0,0];//head,eyes,nose,mouth
+            $("#head").click(function(){
+                moveMe(0,this);
+            });
+            $("#eyes").click(function(){
+                moveMe(1,this);
+            });
+            $("#nose").click(function(){
+                moveMe(2,this);
+            });
+            $("#mouth").click(function(){
+                moveMe(3,this);
+            });
+            function moveMe(i,obj){
+                if(clix[i]<9){
+                    $(obj).animate({left:"-=367px"},500);
+                    clix[i]=clix[i]+1;
+                }else{
+                    clix[i]=0;
+                    $(obj).animate({left:"0px"},500);
+                }
+            }
+            /*lighting_one(4000);
+            lighting_two(5000);
+            lighting_three(7000);*/
+            /*var headclix= 0,eyeclix= 0,noseclix= 0,mouthclix=0;
+            $("#head").click(function(){
+                if(headclix<9){
+                    $(this).animate({left:"-=367"},500);
+                    headclix+=1;
+                }else{
+                    $(this).animate({left:"0px"},500);
+                    headclix=0;
+                }
+            });
+            $("#eyes").click(function(){
+                if(headclix<9){
+                    $(this).animate({left:"-=367"},500);
+                    headclix+=1;
+                }else{
+                    $(this).animate({left:"0px"},500);
+                    headclix=0;
+                }
+            });
+            $("#nose").click(function(){
+                if(headclix<9){
+                    $(this).animate({left:"-=367"},500);
+                    headclix+=1;
+                }else{
+                    $(this).animate({left:"0px"},500);
+                    headclix=0;
+                }
+            });
+            $("#mouth").click(function(){
+                if(headclix<9){
+                    $(this).animate({left:"-=367"},500);
+                    headclix+=1;
+                }else{
+                    $(this).animate({left:"0px"},500);
+                    headclix=0;
+                }
+            });*/
+        });
+        function lighting_one(){
+            $("#container #lighting-01").fadeIn(250).fadeOut(250);
+        //    setTimeout("lighting_one()",4000);
+        };
+        function lighting_two(){
+            $("#container #lighting-02").fadeIn(500).fadeOut(500);
+      //      setTimeout("lighting_two()",5000);
+        };
+        function lighting_three(){
+            $("#container #lighting-03").fadeIn(400).fadeOut(400);
+       //     setTimeout("lighting_three()",7000);
+        };
+        function getRandom(num){
+            var my_num=Math.floor(Math.random()*num);
+            return my_num;
+        }
+    </script>
+</head>
+<script src="jquery-1.10.1.min.js"></script>
+<body>
+    <header id="text-top">
+        <img src="img/Monster_Mashup.png">
+        <button id="btnRandom">Randomize</button>
+        <button id="btnReset">Reset</button>
+        <p>Make your own monster face by clicking on the picture</p>
+    </header>
+    <div id="container">
+        <img src="img/lightning-01.jpg" class="lighting" id="lighting-01">
+        <img src="img/lightning-02.jpg" class="lighting" id="lighting-02">
+        <img src="img/lightning-03.jpg" class="lighting" id="lighting-03">
+        <div id="frame">
+            <div id="pic_box">
+                <div id="head" class="face"><img src="img/headsstrip.jpg"></div>
+                <div id="eyes" class="face"><img src="img/eyesstrip.jpg" ></div>
+                <div id="nose" class="face"><img src="img/nosesstrip.jpg"></div>
+                <div id="mouth" class="face"><img src="img/mouthsstrip.jpg"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
