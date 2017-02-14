@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <title></title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #000000;;
+            font-size: 12px;
+        }
+        .iphone{
+            width: 340px;
+            height: 540px;
+            background-color: #ffffff;
+            position: absolute;;
+            left: 50%;
+            top: 50%;
+            margin: -170px 0 0 -270px;
+        }
+        .h5_component_base{
+            transition: all 1s;;
+        }
+        .h5_component_base_load{
+            opacity: 1;;
+        }
+        .h5_component_base_leave{
+            opacity: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="test-H5ComponentBase.css"/>
+    <script src="../../js/lib/jquery.js"></script>
+    <script src="H5ComponentBase.js"></script>
+</head>
+<body>
+<!--用于开发测试H5ComponentBase对象（基本的图文组件）-->
+   <div class="iphone">
+
+   </div>
+<script type="text/javascript">
+    var cfg={
+        type:'base',
+
+        width:514,
+        height:306,
+        bg:'../img/p1_people.png',
+        css:{
+            left:20,
+            opacity:0
+        },
+        animateIn:{bottom:80,opacity:1},
+        animateOut:{bottom:0,opacity:0},
+        center:true
+    }
+    var h5=new H5ComponentBase('myname',cfg);
+    $('.iphone').append(h5);
+
+    var leave=true;
+    $('body').click(function(){
+        leave=!leave;
+        $('.h5_component').trigger(leave ? 'onLeave':'onLoad');
+    });
+</script>
+</body>
+</html>

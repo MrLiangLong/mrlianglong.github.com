@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="../js/lib/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.2/jquery.fullPage.js" integrity="sha256-ucXpJh/zgAOAdr1UeHA10nswKIrNyqFazVWhJ8Xgjc4=" crossorigin="anonymous"></script>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .component{
+            width: 50%;
+            height: 50px;
+            margin-bottom: 20px;
+            background-color: #eee;
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function(){
+            $("#h5").fullpage({
+                'sectionsColor':['#254875','#00FF00','#254587'],
+                 onLeave:function(index,nextIndex,direction){
+                     console.log($(this).attr('id'),'-->','onLeave');
+                 $("#h5").find('.page').eq(index-1).trigger('onLeave');
+                 },
+                 afterLoad:function(anchorLink,index){
+                     console.log($(this).attr('id'),'-->','onLoad');
+                 $("#h5").find('.page').eq(index-1).trigger('onLoad');
+                 }
+                 });
+
+                 $('.page').on('onLeave',function(){
+                 $(this).find('.component').trigger('onLeave');
+                 })
+                 $('.page').on('onLoad',function(){
+                 $(this).find('.component').trigger('onLoad');
+                 })
+                 $('.component').on('onLoad',function(){
+                 $(this).fadeIn();
+                 return false;
+                 })
+                 $('.component').on('onLeave',function(){
+                 $(this).fadeOut();
+                 return false;
+            })
+        })
+
+    </script>
+</head>
+<body>
+<div id="h5">
+    <div class="page section" id="page-1">
+        <div class="component logo">logo</div>
+        <div class="component slogan">slogan</div>
+    </div>
+    <div class="page section" id="page-2">
+        <div class="component desc">desc</div>
+    </div>
+    <div class="page section" id="page-3">
+        <div class="component bar">bar</div>
+    </div>
+</div>
+</body>
+</html>
