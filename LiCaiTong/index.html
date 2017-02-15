@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>理财通-首页</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="owlcarousel/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="owlcarousel/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+</head>
+<script type="text/javascript">
+    window.onload=window.onresize=function(){
+        var aTitle=document.getElementsByClassName("tb1-title");
+        var aCont=document.getElementsByClassName("tb1-cont");
+        for(var i=0;i<aTitle.length;i++){
+            if(aTitle[i].clientHeight<aCont[i].clientHeight){
+                aTitle[i].style.height=aCont[i].clientHeight+"px";
+                /*aTitle[i].style.background='gray';*/
+            }else{
+                aCont[i].style.height=aTitle[i].clientHeight+"px";
+                /*aCont[i].style.background='gray';*/
+            }
+        }
+
+        var top=($(window).height()-$("#zoneMoreBox").height())/2;
+        var left=($(window).width()-$("#zoneMoreBox").width())/2;
+
+        /***///*//**//*随着滚轮的滚动，div仍居屏幕中*//**//**//**//*
+        /*$(window).scroll(function(){*/
+            var scrollTop=$(document).scrollTop();
+            var scrollLeft=$(document).scrollLeft();
+            /*$("#zoneMoreBox").css({position: 'fixed','top':top+scrollTop,'left':left+scrollLeft})*/
+        /*});*/
+        $("#zoneMore").click(function(){
+            $("#zoneMoreBox").css({display:'block',position: 'fixed','top':top+scrollTop,'left':left+scrollLeft});
+            $("#box-task").css({display:'block',"width":$(document).width(),"height":$(document).height()});
+        });
+        $("#close").click(function(){
+            $("#zoneMoreBox").css({display:'none'});
+            $("#box-task").css({display:'none'});
+        })
+    }
+
+</script>
+<body>
+<header>
+    <div class="wrap">
+        <h1 id="logo">
+            <a href="#" ><img src="img/logo.png" alt="logo"></a>
+        </h1>
+        <nav class="main clearfix">
+            <ul>
+                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="pay.html" >大额转入 <i class="i-balance-add"></i></a></li>
+                <li><a href="help.html">帮助</a></li>
+                <li><a href="login.html"><i class="avatar"></i> 登录</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="container">
+    <div id="ad">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <!--<picture>
+                    <source media="(min-width:50em)" srcset="images/ad001-l.png">
+                    <source media="(min-width:30em)" srcset="images/ad001-m.png">
+                </picture>-->
+                <img src="img/ad001.png" alt="2015年度报告"/>
+            </div>
+            <div class="item">
+                <!--<picture>
+                    <source media="(min-width:50em)" srcset="images/ad002-l.png">
+                    <source media="(min-width:30em)" srcset="images/ad002-m.png">
+                </picture>-->
+                <img src="img/ad002.png" alt="新年红包"/>
+            </div>
+            <div class="item">
+                <!--<picture>
+                    <source media="(min-width:50em)" srcset="images/ad003-l.png">
+                    <source media="(min-width:30em)" srcset="images/ad003-m.png">
+                </picture>-->
+                <img src="img/ad003.png" alt="新手秘籍"/>
+            </div>
+        </div>
+    </div>
+    <!--数据统计-->
+    <div class="index-count">理财通总用户数超过<span>60,000,000</span>，累计为用户赚了超过<span>7,000,000,000</span> 元（截至2016年6月）</div>
+   <!--推荐位-->
+    <section class="hot-recommend">
+        <ul class="hot-list clearfix">
+            <li>
+                <em class="hot-tag"><b>热门货基</b></em>
+                <p class="f-name"><a href="#">男方基金现金通E</a></p>
+                <p class="ranger">近7日年化</p>
+                <p class="r-num">3.5310%</p>
+                <div class="character">
+                    <span>低风险</span>
+                    <span>随存随取</span>
+                    <span>0元起购</span>
+                </div>
+                <div class="btn-wrap">
+                    <a href="product.html">立即买入</a>
+                </div>
+            </li>
+            <li>
+                <em class="hot-tag"><b>热门货基</b></em>
+                <p class="f-name"><a href="#">男方基金现金通E</a></p>
+                <p class="ranger">近7日年化</p>
+                <p class="r-num">3.5310%</p>
+                <div class="character">
+                    <span>低风险</span>
+                    <span>随存随取</span>
+                    <span>0元起购</span>
+                </div>
+                <div class="btn-wrap">
+                    <a href="product.html">立即买入</a>
+                </div>
+            </li>
+            <li>
+                <em class="hot-tag"><b>热门货基</b></em>
+                <p class="f-name"><a href="#">男方基金现金通E</a></p>
+                <p class="ranger">近7日年化</p>
+                <p class="r-num">3.5310%</p>
+                <div class="character">
+                    <span>低风险</span>
+                    <span>随存随取</span>
+                    <span>0元起购</span>
+                </div>
+                <div class="btn-wrap">
+                    <a href="product.html">立即买入</a>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <!--首页主要内容-->
+    <div class="index-main">
+        <!--tab内容-->
+        <div class="index-content">
+                <!--稳健理财专区-->
+                <div class="stable-zone clearfix" id="stable">
+                    <div class="wrap clearfix">
+                        <div class="zone-hd clearfix">
+                            <strong>理财专区</strong>
+                            <ul>
+                                <li><a href="#" class="active-zone-hd">稳健理财专区</a></li>
+                                <li><a href="#secure">保险理财专区<sup class="ico-tips">可预约</sup></a></li>
+                                <li><a href="#etf">指数基金专区</a></li>
+                            </ul>
+                            <div class="ribbon-box"><span>货币基金收益大比拼，理财通稳居前茅<b>>></b></span></div>
+                        </div>
+                        <div class="zone-bd stable-zone-hbjj">
+                            <div class="tb1-wrap clearfix">
+                                <div class="tb1-title stable-title">
+                                    <span>货币<br>基金</span>
+                                    <p>低风险，更灵活</p>
+                                    <div class="tb1-title-bg">
+                                        <img src="img/tbl_money.jpg">
+                                    </div>
+                                </div>
+                                <div class="tb1-cont">
+                                    <div class="tb1-cont-title">
+                                        <p>
+                                            <span>基金名称</span>
+                                            <span>近七日年化<i class="i-var"></i></span>
+                                            <span>万份收益<i class="i-var"></i></span>
+                                            <span>理财期限</span>
+                                        </p>
+                                    </div>
+                                    <div class="tb1-cont-product">
+                                        <div class="product-list clearfix">
+                                            <p>华夏基金财富宝</p>
+                                            <div class="product-info clearfix">
+                                                <span>2.4580%</span>
+                                                <span>0.2863</span>
+                                                <span>随买随取</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="product.html">买入</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-list clearfix">
+                                            <p>华夏基金财富宝</p>
+                                            <div class="product-info">
+                                                <span>2.4580%</span>
+                                                <span>0.2863</span>
+                                                <span>随买随取</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="product.html">买入</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-list clearfix">
+                                            <p>华夏基金财富宝</p>
+                                            <div class="product-info">
+                                                <span>2.4580%</span>
+                                                <span>0.2863</span>
+                                                <span>随买随取</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="product.html">买入</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-list clearfix">
+                                            <p>华夏基金财富宝</p>
+                                            <div class="product-info">
+                                                <span>2.4580%</span>
+                                                <span>0.2863</span>
+                                                <span>随买随取</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="product.html">买入</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-list clearfix">
+                                            <p>华夏基金财富宝</p>
+                                            <div class="product-info">
+                                                <span>2.4580%</span>
+                                                <span>0.2863</span>
+                                                <span>随买随取</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="product.html">买入</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zone-bd stable-zone-dqlc">
+                            <div class="tb1-wrap clearfix">
+                                <div class="tb1-title dq-title">
+                                    <span>定期<br>理财</span>
+                                    <div class="dq-title-bg">
+                                        <img src="img/tbl_time.jpg">
+                                    </div>
+                                </div>
+                                <div class="tb1-cont">
+                                    <div class="tb1-cont-title">
+                                        <p>
+                                            <span>基金名称</span>
+                                            <span>近七日年化<i class="i-var"></i></span>
+                                            <span>万份收益<i class="i-var"></i></span>
+                                            <span>理财期限</span>
+                                        </p>
+                                    </div>
+                                    <div class="tb1-cont-product">
+                                        <div class="product-list clearfix">
+                                            <p>华夏基金财富宝</p>
+                                            <div class="product-info clearfix">
+                                                <span>2.4580%</span>
+                                                <span>0.2863</span>
+                                                <span>2个月</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="product.html">买入</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-list clearfix">
+                                            <p>华夏基金财富宝</p>
+                                            <div class="product-info">
+                                                <span>2.4580%</span>
+                                                <span>0.2863</span>
+                                                <span>45天</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="product.html">买入</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-list clearfix">
+                                            <p>华夏基金财富宝</p>
+                                            <div class="product-info">
+                                                <span>2.4580%</span>
+                                                <span>0.2863</span>
+                                                <span>50天</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="product.html">买入</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-list clearfix">
+                                            <p>华夏基金财富宝</p>
+                                            <div class="product-info">
+                                                <span>2.4580%</span>
+                                                <span>0.2863</span>
+                                                <span>55天</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="product.html">买入</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-list clearfix">
+                                            <p>华夏基金财富宝</p>
+                                            <div class="product-info">
+                                                <span>2.4580%</span>
+                                                <span>-</span>
+                                                <span>3个月</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="product.html">买入</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-list clearfix">
+                                            <p>华夏基金财富宝</p>
+                                            <div class="product-info">
+                                                <span>2.4580%</span>
+                                                <span>-</span>
+                                                <span>6个月</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="product.html">买入</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-list clearfix">
+                                            <p>华夏基金财富宝</p>
+                                            <div class="product-info">
+                                                <span>2.4580%</span>
+                                                <span>-</span>
+                                                <span>90天</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="product.html">买入</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-list clearfix">
+                                            <p>华夏基金财富宝</p>
+                                            <div class="product-info">
+                                                <span>2.4580%</span>
+                                                <span>-</span>
+                                                <span>120天</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="product.html">买入</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--保险理财专区-->
+                <div class="secure-zone" id="secure">
+                    <div class="wrap clearfix">
+                        <div class="zone-bd">
+                            <div class="tb1-wrap clearfix">
+                                <div class="tb1-title secure-title">
+                                    <span>保险<br>理财</span>
+                                    <p>中风险，新产品</p>
+                                    <div class="secure-title-bg">
+                                        <img src="img/tbl_secure.png">
+                                    </div>
+                                </div>
+                                <div class="tb1-cont">
+                                    <div class="tb1-cont-title">
+                                        <p>
+                                            <span>产品名称</span>
+                                            <span>年化收益率<i class="i-var"></i></span>
+                                            <span>万份收益率<i class="i-var"></i></span>
+                                            <span>理财期限</span>
+                                        </p>
+                                    </div>
+                                    <div class="tb1-cont-product">
+                                        <div class="product-list clearfix">
+                                            <p>华夏基金财富宝</p>
+                                            <div class="product-info clearfix">
+                                                <span>2.4580%</span>
+                                                <span>0.2863</span>
+                                                <span>随买随取</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="product.html">买入</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-list clearfix">
+                                            <p>华夏基金财富宝</p>
+                                            <div class="product-info">
+                                                <span>2.4580%</span>
+                                                <span>0.2863</span>
+                                                <span>随买随取</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="#">预约</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-list clearfix">
+                                            <p>华夏基金财富宝</p>
+                                            <div class="product-info">
+                                                <span>2.4580%</span>
+                                                <span>0.2863</span>
+                                                <span>随买随取</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="#">预约</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-list clearfix">
+                                            <p>华夏基金财富宝</p>
+                                            <div class="product-info">
+                                                <span>2.4580%</span>
+                                                <span>0.2863</span>
+                                                <span>随买随取</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="#">买入</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-list clearfix">
+                                            <p>华夏基金财富宝</p>
+                                            <div class="product-info">
+                                                <span>2.4580%</span>
+                                                <span>0.2863</span>
+                                                <span>随买随取</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="#">预约</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--企业贷理财-->
+                <div class="zone">
+                    <div class="wrap clearfix">
+                        <div class="zone-bd">
+                            <div class="tb1-wrap clearfix">
+                                <div class="tb1-title qy-title">
+                                    <span>企业贷<br>理财</span>
+                                    <a href="#"><p>了解企业贷</p></a>
+                                    <div class="qy-title-bg">
+                                        <img src="img/tbl_entloan.png">
+                                    </div>
+                                </div>
+                                <div class="tb1-cont">
+                                    <div class="tb1-cont-title">
+                                        <p>
+                                            <span>产品名称</span>
+                                            <span>预期年化收益率</span>
+                                            <span>理财期限</span>
+                                            <!--<span>1</span>-->
+                                        </p>
+                                    </div>
+                                    <div class="tb1-cont-product">
+                                        <div class="product-list clearfix">
+                                            <p>天金所支信通（联易融）2016年第38期</p>
+                                            <div class="product-info clearfix">
+                                                <span>2.4580%</span>
+                                                <span>155天</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="#">详情</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-list clearfix">
+                                            <p>天金所支信通（融品汇）2016年第3期</p>
+                                            <div class="product-info">
+                                                <span>2.4580%</span>
+                                                <span>92天</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="#">详情</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-list list-more">
+                                                <a href="#" id="zoneMore" class="more">查看更多</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--企业贷理财更多产品-->
+                <!--遮罩层-->
+                <div id="box-task"></div>
+                <!--弹出层-->
+                <div id="zoneMoreBox">
+                    <a href="#" id="close" class="btn-close"></a>
+                    <div class="box-title">
+                        <h2>请选择买入的理财产品</h2>
+                    </div>
+                    <div class="box-main">
+                        <div class="comtab-box">
+                            <table class="table">
+                                <colgroup>
+                                    <col width="360"/>
+                                    <col width="200"/>
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>基金名称</th>
+                                    <th>预计年化收益</th>
+                                    <th>理财期限</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>天金所支信通(联易融)2016年第42期</td>
+                                    <td>5.0000%</td>
+                                    <td>153天</td>
+                                    <td><a href="#" class="zone-buy">买入</a></td>
+                                </tr>
+                                <tr>
+                                    <td>天金所支信通(联易融)2016年第39期</td>
+                                    <td>5.0000%</td>
+                                    <td>372天</td>
+                                    <td><a href="#" class="zone-buy">买入</a></td>
+                                </tr>
+                                <tr>
+                                    <td>天金所支信通(联易融)2016年第42期</td>
+                                    <td>5.0000%</td>
+                                    <td>153天</td>
+                                    <td><a href="#" class="zone-buy">买入</a></td>
+                                </tr>
+                                <tr>
+                                    <td>天金所支信通(联易融)2016年第39期</td>
+                                    <td>5.0000%</td>
+                                    <td>372天</td>
+                                    <td><a href="#" class="zone-buy">买入</a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--报价回购-->
+                <div class="buyback-zone">
+                    <div class="wrap clearfix">
+                        <div class="zone-bd">
+                            <div class="tb1-wrap clearfix">
+                                <div class="tb1-title buyback-title">
+                                    <span>报价<br>回购</span>
+                                    <p>低风险，短期理财</p>
+                                    <a href="#"><p>了解报价回购</p></a>
+                                    <div class="buyback-title-bg">
+                                        <img src="img/tbl_buyback.png">
+                                    </div>
+                                </div>
+                                <div class="tb1-cont">
+                                    <div class="tb1-cont-title">
+                                        <p>
+                                            <span>产品名称</span>
+                                            <span>预期年化收益率</span>
+                                            <span>理财期限</span>
+                                            <!--<span>1</span>-->
+                                        </p>
+                                    </div>
+                                    <div class="tb1-cont-product">
+                                        <div class="product-list clearfix">
+                                            <p>中信证券天天利财周周盈</p>
+                                            <div class="product-info clearfix">
+                                                <span>2.4580%</span>
+                                                <span>155天</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="#">详情</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-list clearfix">
+                                            <p>中信证券天天利财月月盈</p>
+                                            <div class="product-info">
+                                                <span>2.4580%</span>
+                                                <span>92天</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="#">详情</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-list clearfix">
+                                            <p>中信证券天天利财月月盈</p>
+                                            <div class="product-info">
+                                                <span>2.4580%</span>
+                                                <span>92天</span>
+                                            </div>
+                                            <div class="product-buy">
+                                                <a href="#">详情</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--指数理财专区-->
+                <div class="etf-zone" id="etf">
+                    <div class="wrap clearfix">
+                        <div class="zone-bd">
+                            <div class="tb1-wrap clearfix">
+                                <div class="tb1-title etf-title">
+                                    <span>指数<br>基金</span>
+                                    <p>高风险，随故事涨跌</p>
+                                    <div class="etf-title-bg">
+                                        <img src="img/tbl_etf.jpg">
+                                    </div>
+                                </div>
+                                <div class="tb1-cont">
+                                    <ul class="hot-list clearfix">
+                                        <li>
+                                            <p class="f-name"><a href="#">男方基金现金通E</a></p>
+                                            <p class="ranger">近7日年化</p>
+                                            <p class="r-num">3.5310%</p>
+                                            <div class="character">
+                                                <span>近一年跟踪误差：0.7306</span>
+                                            </div>
+                                            <div class="btn-wrap">
+                                                <a href="#">立即查看</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="f-name"><a href="#">男方基金现金通E</a></p>
+                                            <p class="ranger">近7日年化</p>
+                                            <p class="r-num">3.5310%</p>
+                                            <div class="character">
+                                                <span>近一年跟踪误差：0.7306</span>
+                                            </div>
+                                            <div class="btn-wrap">
+                                                <a href="#">立即查看</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="f-name"><a href="#">男方基金现金通E</a></p>
+                                            <p class="ranger">近7日年化</p>
+                                            <p class="r-num">3.5310%</p>
+                                            <div class="character">
+                                                <span>近一年跟踪误差：0.7306</span>
+                                            </div>
+                                            <div class="btn-wrap">
+                                                <a href="#">立即查看</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="f-name"><a href="#">男方基金现金通E</a></p>
+                                            <p class="ranger">近7日年化</p>
+                                            <p class="r-num">3.5310%</p>
+                                            <div class="character">
+                                                <span>近一年跟踪误差：0.7306</span>
+                                            </div>
+                                            <div class="btn-wrap">
+                                                <a href="#">立即查看</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="f-name"><a href="#">男方基金现金通E</a></p>
+                                            <p class="ranger">近7日年化</p>
+                                            <p class="r-num">3.5310%</p>
+                                            <div class="character">
+                                                <span>近一年跟踪误差：0.7306</span>
+                                            </div>
+                                            <div class="btn-wrap">
+                                                <a href="#">立即查看</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="f-name"><a href="#">男方基金现金通E</a></p>
+                                            <p class="ranger">近7日年化</p>
+                                            <p class="r-num">3.5310%</p>
+                                            <div class="character">
+                                                <span>近一年跟踪误差：0.7306</span>
+                                            </div>
+                                            <div class="btn-wrap">
+                                                <a href="#">立即查看</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!--相关资讯-->
+        <div class="area-div">
+            <div class="wrap">
+                <a class="all" href="#">查看全部</a>
+                <div class="hd1">
+                    <strong>
+                        <i></i>相关资讯
+                    </strong>
+                </div>
+                <div class="area-bd">
+                    <div class="fund-exponent">
+                        <ul class="fund-exponent-list">
+                            <li>上证指数
+                                <p><span>3110.15</span><span>-29.40↓</span><span>-0.94%↓</span></p>
+                            </li>
+                            <li> 深证指数
+                                <p>
+                                    <span>3110.15</span>
+                                    <span>-29.40↓</span>
+                                    <span>-0.94%↓</span>
+                                </p>
+                            </li>
+                            <li>创业板指
+                                <p>
+                                    <span>3110.15</span>
+                                    <span>-29.40↓</span>
+                                    <span>-0.94%↓</span>
+                                </p>
+                            </li>
+                            <li class="renew-time">更新时间：<p>2016-12-24 15:08:18</p><a href="#"></a></li>
+                        </ul>
+                    </div>
+                    <div class="fund-news">
+                        <ul>
+                            <li><a href="#">人民币结算汇价“虚破”七关口业内称汇率波动风险已被高</a><span class="time">12-23</span></li>
+                            <li><a href="#">沪指延续牛皮震荡走势 权重股集体走低</a><span class="time">12-23</span></li>
+                            <li><a href="#">港股圣诞节休市2天 深股通沪股周五起暂停交易</a><span class="time">12-23</span></li>
+                            <li><a href="#">创业板成交额创进三月新低 缘何扶不起</a><span class="time">12-23</span></li>
+                            <li><a href="#">人民币结算汇价“虚破”七关口业内称汇率波动风险已被高</a><span class="time">12-23</span></li>
+                            <li><a href="#">沪指延续牛皮震荡走势 权重股集体走低</a><span class="time">12-23</span></li>
+                            <li><a href="#">港股圣诞节休市2天 深股通沪股周五起暂停交易</a><span class="time">12-23</span></li>
+                            <li><a href="#">创业板成交额创进三月新低 缘何扶不起</a><span class="time">12-23</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--最新公告&常见问题&大家都在买-->
+        <div class="blend-wrap">
+            <div class="blend-wrap-box wrap clearfix">
+                <div class="lf">
+                    <div class="cbox1">
+                        <a href="#" class="all">查看全部</a>
+                        <div class="hd1">
+                            <strong>
+                                <i></i>常见问题
+                            </strong>
+                        </div>
+                        <div class="bd1">
+                            <ul>
+                                <li><a href="#">理财通平台及产品简介</a></li>
+                                <li><a href="#">如何更改理财通安全卡</a></li>
+                                <li><a href="#">买入理财产品的步骤</a></li>
+                                <li><a href="#">货币基金的取出额度和到账时间</a></li>
+                                <li><a href="#">理财通支持银行及其各银行买入限额</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="rg">
+                    <div class="cbox1">
+                        <div class="hd1">
+                            <strong>
+                                <i></i>最新公告
+                            </strong>
+                        </div>
+                        <div class="bd1">
+                            <ul>
+                                <li><a href="#">理财通平台及产品简介</a></li>
+                                <li><a href="#">如何更改理财通安全卡</a></li>
+                                <li><a href="#">买入理财产品的步骤</a></li>
+                                <li><a href="#">货币基金的取出额度和到账时间</a></li>
+                                <li><a href="#">理财通支持银行及其各银行买入限额</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--合作金融机构-->
+        <div class="company">
+            <div class="cbox">
+                <div class="hd">合作金融机构</div>
+                <ul class="bank-list clearfix">
+                    <li><i></i></li>
+                    <li><i></i></li>
+                    <li><i></i></li>
+                    <li><i></i></li>
+                    <li><i></i></li>
+                    <li><i></i></li>
+                    <li><i></i></li>
+                    <li><i></i></li>
+                    <li><i></i></li>
+                    <li><i></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="wrap clearfix">
+        <div class="about-us clearfix">
+            <i class="i-logo-ct"></i>
+            <div class="rt">
+                <stong>关于理财通</stong>
+                <a href="#">理财通简介</a>
+            </div>
+        </div>
+        <div class="contact-us clearfix">
+            <i class="i-phone"></i>
+            <div class="rt">
+                <strong>联系客服</strong>
+                <span class="lt-line">
+                    "微信用户：9507（拨通后转1再转6）"
+                    <br/>
+                    "QQ用户：86013860（拨通后转4）"
+                </span>
+                <span>工作时间：09:00-22:00</span>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="owlcarousel/vendors/jquery.min.js"></script>
+<script src="owlcarousel/owlcarousel/owl.carousel.min.js"></script>
+<script src="owlcarousel/vendors/picture.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

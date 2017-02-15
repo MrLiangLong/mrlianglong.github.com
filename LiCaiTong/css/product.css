@@ -1,0 +1,49 @@
+.wrap{margin-top: 30px;}
+.detail-top{background: #ffffff;border:2px solid #f0f0f0;padding: 36px 0 0 36px;padding-bottom: 30px;margin-bottom: 5px;}
+.chart-wrap{float: left;width: 55%;}
+.chart-wrap .chart-nav{width:80%;font-size: 16px;border-bottom: 1px solid #dcdcdc;padding-bottom: 4px;margin-bottom: 10px;}
+.chart-wrap .chart-nav span{margin: 0 10px;}
+.chart-wrap .chart-nav a{text-decoration: none;color: #666;}
+.detail-top .chart-wrap .chart-nav .on{color:#228bff;}
+.on{color:#228bff; }
+.chart-wrap .chart-cnt{border: 1px solid #dcdcdc;height: 250px;width: 430px;}
+.chart-wrap .chart{height: 200px;}
+.chart-wrap .chart-cnt .chart-tab a{display: inline-block;font-size: 16px;color: #7d7d7d;
+    border: 1px solid #7d7d7d;padding: 4px 16px;width: 60px;margin: 0 14px;text-align: center;
+    border-radius: 4px;text-decoration: none;}
+.chart-wrap .chart-cnt .chart-tab .on{color:#228bff;border: 1px solid #228bff; }
+
+
+.fund-basic{float: left;width: 45%;margin-top: -14px;}
+.fund-basic .fund-title{font-size: 28px;color: #404040;font-weight: normal;}
+.fund-basic .f-blue{margin-top: 0px;color: #228bff;font-size: 16px;}
+.fund-basic .basic-list .label{font-size: 16px;color: #7d7d7d;width: 84px;line-height: 36px;margin-right: 20px;float: left;}
+.fund-basic .basic-list .value{float: left;}
+.basic-list li{padding: 5px 0;line-height: 32px;font-size: 16px;zoom: 1;}
+.fund-basic .basic-list .clearFix:after{content: "";clear: both;display: table;}
+.fund-basic .basic-list .value .value-input{background:#ffffff;padding-left: 5px;color: #999999;border: 1px solid #999;width:130px;height:30px;margin-right: 4px;}
+.fund-basic .basic-list .line{border-top: 1px solid #999;margin: 10px;margin-left: 0px;}
+.fund-basic .buy-btn{margin-top: 10px;}
+.fund-basic .buy-btn a {width:280px;height: 50px;display: block;line-height: 50px;text-align: center;background: #ff8f00;font-size: 20px;color: #ffffff;border: #ff8f00; }
+
+
+.detail-tab{margin-top: 30px;background: #ffffff;border: 2px solid #f0f0f0;}
+.detail-tab .tab-nav{height: 58px;line-height: 58px;background: #f3f3f3;}
+.detail-tab .tab-nav a{display:inline-block;height:60px;line-height: 60px;text-align: center;padding: 0 30px;font-size: 16px;border-right: #d5d5d5;}
+.detail-tab .tab-nav a:hover{text-decoration: none;color: #222;}
+.detail-tab .tab-nav .on{border-top: 3px solid #228bff;background: #ffffff;}
+
+.tab-cnt{}
+.tab-cnt .title{padding-left:20px;font-size: 24px;font-weight: 700;font-style: normal;border-bottom: 1px solid  #999;padding-bottom: 12px;}
+.tab-cnt .title i{font-style: normal;border-left: 3px solid  #228bff;padding-right: 4px;}
+.tab-cnt .basic-list{margin-left: 30px;}
+.basic-list li{padding: 5px 0;line-height: 32px;font-size: 16px;width: 320px;display: inline-block;}
+.tab-cnt .basic-list .label{font-size: 16px;color: #7d7d7d;width: 84px;line-height: 36px;margin-right: 20px;float: left;}
+.tab-cnt .basic-list .value{float: left;}
+.tab-cnt .basic-list .value a{color: #228bff !important;text-decoration: none; }
+.tab-cnt .basic-list .clearFix:after{content: "";clear: both;display: table;}
+
+.table{margin-bottom: 20px;font-size: 14px;margin-left: 30px;width: 100%;border-collapse: collapse;}
+.table th{text-indent: 30px;background: #eeeeee;color: #999;line-height: 36px;text-align: left;white-space: nowrap;}
+.table td{padding: 10px 30px;color: #535353;border-bottom: 1px solid #eeeeee;}
+.tab-txt{padding-left: 30px;font-size: 16px;margin-bottom: 100px;}

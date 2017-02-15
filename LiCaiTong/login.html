@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script>
+            /*$(".align-c").click(function () {
+
+                $(".align-c").each(function (j) {
+                    $(".align-c").eq(j).removeClass("cur");
+                });
+                $(this).addClass("cur");
+
+            })*/
+/*            $(window).ready(function(){
+                $("#login_tab li").click(function(index){
+                   var s= $("#login_tab li").index(this);
+                    $(this).addClass("cur").siblings().removeClass("cur");
+                    $("#login-box  div").eq(s).addClass("js-login-bd login-bd").siblings().addClass("hide");
+                });
+            });*/
+/*            $(window).ready(function(){
+                $('.login-tab').find('li').click(function(){
+                    $('.login-tab').find('').attr('class','');
+                    $('#login-box').find('div').css('display','none');
+                    $(this).attr('class','align-c cur');
+                    $('#login-box').find('div').eq($(this).index()).css('display','block');
+                });
+            });*/
+    </script>
+</head>
+<body>
+<header>
+    <h1 id="logo">
+        <a href="#" ><img src="img/logo.png" alt="logo"></a>
+    </h1>
+    <nav class="main clearfix">
+        <ul>
+            <li><a href="index.html" class="active">首页</a></li>
+            <li><a href="pay.html" >大额转入 <i class="i-balance-add"></i></a></li>
+            <li><a href="help.html">帮助</a></li>
+            <li><a href="login.html"><i class="avatar"></i> 登录</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="login-wrap js-login-wrap">
+    <div class="box-mask-notop js-mask hide"></div>
+    <div class="login-box">
+        <ul class="login-tab clearfix" id="login_tab">
+            <li id="qqLogin" class="align-c  cur">
+                <div class="tab-inner-wrap">
+                    <i class="i-vx"></i>
+                    <span>微信登录</span>
+                </div>
+            </li>
+            <li id="wxLogin" class="align-c">
+                <div class="tab-inner-wrap">
+                    <i class="i-qq"></i>
+                    <span>QQ登录</span>
+                </div>
+            </li>
+        </ul>
+        <div id="login-box">
+            <div id="qqPage" class="js-login-bd login-bd">
+                <div class="er-wei">
+                    <img src="img/login/pc_fund_qr_code_create.png">
+                    <p>微信扫描上方二维码，登录微信理财通</p>
+                </div>
+            </div>
+            <div id="wxPage" class="js-login-bd login-bd  hide ">
+                <div class="er-wei er-wei-qq">
+                    <span>快速安全登录</span>
+                    <p>请使用<a>QQ版手机</a>扫描二维码<br>
+                        安全登录，防止盗号</p>
+                    <img src="img/login/pc_fund_qr_code_create.png">
+                    <p class="er-wei-qq-bottom">
+                        <a href="#">账号密码登录</a>|
+                        <a href="#">注册新账号</a>|
+                        <a href="#">意见反馈</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>Copyright©2005-2015 Tenpay All Rights Reserved 财付通公司 版权所有</p>
+</footer>
+</body>
+</html>

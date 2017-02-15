@@ -1,0 +1,24 @@
+.container{height: 100%;}
+.wrap{height: 100%;width: 80%;}
+
+.o-box{background: #ffffff;height:80px;line-height: 80px;margin-top: 20px;padding: 0 20px;}
+.o-box span{font-size: 16px;}
+.o-box input{width:200px;height: 40px;background: #e0e0e0;border: none;font-size: 16px;color: #999;padding-left: 10px;}
+.pay-box{background: #ffffff;margin-top: 20px; padding: 20px;}
+.pay-box div{font-size: 24px;color: #666;display: block;height: 40px;border-bottom: #666666;}
+.pay-box .pay-box-border{border-bottom: 1px solid #666;}
+.pay-btn{padding: 40px 0 0 30px;cursor: pointer;}
+.pay-btn .pay-num{font-size: 16px;color: #333;padding-bottom: 14px;}
+.pay-btn .pay-num span{font-size: 40px;color:#ff5d5b; }
+.pay-btn .pay-num span b{font-size: 16px;}
+.pay-btn .pay-rule{font-size: 16px;color: #999;display: inline-block;}
+.pay-btn .pay-rule span{color: #017bff;margin-left: 3px;}
+.pay-btn input{display: inline-block;width: 20px;height: 20px;}
+.pay-btn .btn-pay{display: block;width: 260px;height: 40px;line-height: 40px;font-size: 28px;color: #ffffff;background:#ffb039;
+text-align: center;margin: 20px 0 100px;border: 1px solid #f89e15;}
+
+
+
+
+
+

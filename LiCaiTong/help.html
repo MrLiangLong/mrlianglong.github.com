@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>理财通</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/help.css" rel="stylesheet">
+    <style>
+        .question-bd .qa-list .answer-wrap{margin-top: 30px;margin-bottom: 40px;display: none;}
+        .show{display: block;}
+    </style>
+    <script>
+        window.onload=function(){
+            var aTab =document.getElementById("tab").children;
+            var aTabCont=document.getElementById("tab-content").children;
+            var aQTitle=document.getElementsByClassName("qa-title");
+            var aQContent=document.getElementsByClassName("answer-wrap");
+            var len=aTab.length;
+            var qLength=aQTitle.length;
+            var flag=true;
+
+            for(var i=0;i<len;i++){
+                aTab[i].index=i;
+                aTab[i].onclick=function(){
+                    for(var j=0;j<len;j++){
+                        aTab[j].className="";
+                        aTabCont[j].style.display="none";
+                        /*aTabCont[j].className= aTabCont[j].className.replace(/show /,"hide")*/
+                    };
+                    aTab[this.index].className="cur";
+                    /*alert(aTabCont[j].style.display);*/
+                    aTabCont[this.index].style.display="block";
+                }
+            }
+
+            for(var i=0;i<qLength;i++){
+                aQTitle[i].index=i;
+                aQTitle[i].onclick=function(){
+                    if(flag){
+                        aQContent[this.index].style.display="block";
+                        flag=false;
+                    }else{
+                        aQContent[this.index].style.display="none";
+                        flag=true;
+                    }
+                }
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+<header>
+    <h1 id="logo">
+        <a href="#" ><img src="img/logo.png" alt="logo"></a>
+    </h1>
+    <nav class="main clearfix">
+        <ul>
+            <li><a href="index.html" class="active">首页</a></li>
+            <li><a href="pay.html" >大额转入 <i class="i-balance-add"></i></a></li>
+            <li><a href="help.html">帮助</a></li>
+            <li><a href="login.html"><i class="avatar"></i> 登录</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<div class="main-div">
+    <div class="page-detail clearfix">
+        <div class="page-detail-lt clearfix">
+            <div class="side-box">
+                <div class="equal-height side-box-bg"></div>
+                <div class="side-left">
+                    <ul id="tab" class="side-nav">
+                        <li class="cur"><a href="#">常见问题</a></li>
+                        <li><a href="#">招商银行</a></li>
+                        <li><a href="#">工商银行</a></li>
+                        <li><a href="#">建设银行</a></li>
+                    <!--    <li><a href="#">农业银行</a></li>
+                        <li><a href="#">中国银行</a></li>
+                        <li><a href="#">邮储银行</a></li>
+                        <li><a href="#">其他银行</a></li>-->
+                    </ul>
+                </div>
+            </div>
+            <div id="tab-content">
+                <div id="Page1" class=" wt page-detail-bd">
+                    <div class="question-banner clearfix">
+                        <div class="bank-logo">
+                            <i class="logo zhaoshang"></i>
+                            <p class="service-tel">客服电话：95555</p>
+                        </div>
+                        <div class="bank-control-guide">
+                            <p class="control-tips">【常见问题】使用专业版UKey，最高支持1000万支付额度</p>
+                            <a href="#" class="btn"><i class="ico-check"></i>查看网银操作指南</a>
+                        </div>
+                    </div>
+                    <div class="question-bd">
+                        <ul class="qa-list">
+                            <li>
+                                <div class="qa-title">
+                                    <i class="arrow"></i>
+                                    <span>怎么开通招商银行网上银行？</span>
+                                </div>
+                                <div class="answer-wrap">
+                                    <p class="answer">
+                                        答：您必须先持有招商银行“一卡通”（如没有请先到柜台申请，最好直接让工作人员帮你开通）。
+                                        招商银行一卡通的客户有3种方式申请支付卡：网上申请、电话申请和柜台申请。答：您必须先持有
+                                        招商银行“一卡通”（如没有请先到柜台申请，最好直接让工作人员帮你开通）。 招商银行一卡通
+                                        的客户有3种方式申请支付卡：网上申请、电话申请和柜台申请。 请注意，通过网上申请到支付卡，
+                                        将会有一段“保护期”。保护期期间您只能进行小额支付。通过电话或者柜台申请则没有保护期限制。
+                                        如果您需进行大额支付，请申请开通个人银行专业版，并通过专业版进行支付。 如果网上申请和电话
+                                        申请都失败，可以通过柜台申请。 办理柜台申请，请携带一卡通和开户证件，前往任意招行网点办理。
+                                        申请开通个人银行专业版，也请 携带一卡通和开户证件，前往任意招行网点办理。
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="qa-title">
+                                    <i class="arrow"></i>
+                                    <span>怎么开通招商银行网上银行？</span>
+                                </div>
+                                <div class="answer-wrap">
+                                    <p class="answer">
+                                        答：您必须先持有招商银行“一卡通”（如没有请先到柜台申请，最好直接让工作人员帮你开通）。
+                                        招商银行一卡通的客户有3种方式申请支付卡：网上申请、电话申请和柜台申请。答：您必须先持有
+                                        招商银行“一卡通”（如没有请先到柜台申请，最好直接让工作人员帮你开通）。 招商银行一卡通
+                                        的客户有3种方式申请支付卡：网上申请、电话申请和柜台申请。 请注意，通过网上申请到支付卡，
+                                        将会有一段“保护期”。保护期期间您只能进行小额支付。通过电话或者柜台申请则没有保护期限制。
+                                        如果您需进行大额支付，请申请开通个人银行专业版，并通过专业版进行支付。 如果网上申请和电话
+                                        申请都失败，可以通过柜台申请。 办理柜台申请，请携带一卡通和开户证件，前往任意招行网点办理。
+                                        申请开通个人银行专业版，也请 携带一卡通和开户证件，前往任意招行网点办理。
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="qa-title">
+                                    <i class="arrow"></i>
+                                    <span>怎么开通招商银行网上银行？</span>
+                                </div>
+                                <div class="answer-wrap"></div>
+                            </li>
+                            <li>
+                                <div class="qa-title">
+                                    <i class="arrow"></i>
+                                    <span>怎么开通招商银行网上银行？</span>
+                                </div>
+                                <div class="answer-wrap"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="Page2" class="zs  page-detail-bd">
+                    <div class="question-banner clearfix">
+                        <div class="bank-logo">
+                            <i class="logo zhaoshang"></i>
+                            <p class="service-tel">客服电话：95555</p>
+                        </div>
+                        <div class="bank-control-guide">
+                            <p class="control-tips">【招商银行】使用专业版UKey，最高支持1000万支付额度</p>
+                            <a href="#" class="btn"><i class="ico-check"></i>查看网银操作指南</a>
+                        </div>
+                    </div>
+                    <div class="question-bd">
+                        <ul class="qa-list">
+                            <li>
+                                <div class="qa-title">
+                                    <i class="arrow"></i>
+                                    <span>怎么开通招商银行网上银行？</span>
+                                </div>
+                                <div class="answer-wrap">
+                                    <p class="answer">
+                                        答：您必须先持有招商银行“一卡通”（如没有请先到柜台申请，最好直接让工作人员帮你开通）。
+                                        招商银行一卡通的客户有3种方式申请支付卡：网上申请、电话申请和柜台申请。答：您必须先持有
+                                        招商银行“一卡通”（如没有请先到柜台申请，最好直接让工作人员帮你开通）。 招商银行一卡通
+                                        的客户有3种方式申请支付卡：网上申请、电话申请和柜台申请。 请注意，通过网上申请到支付卡，
+                                        将会有一段“保护期”。保护期期间您只能进行小额支付。通过电话或者柜台申请则没有保护期限制。
+                                        如果您需进行大额支付，请申请开通个人银行专业版，并通过专业版进行支付。 如果网上申请和电话
+                                        申请都失败，可以通过柜台申请。 办理柜台申请，请携带一卡通和开户证件，前往任意招行网点办理。
+                                        申请开通个人银行专业版，也请 携带一卡通和开户证件，前往任意招行网点办理。
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="qa-title">
+                                    <i class="arrow"></i>
+                                    <span>怎么开通招商银行网上银行？</span>
+                                </div>
+                                <div class="answer-wrap">
+                                    <p class="answer">
+                                        答：您必须先持有招商银行“一卡通”（如没有请先到柜台申请，最好直接让工作人员帮你开通）。
+                                        招商银行一卡通的客户有3种方式申请支付卡：网上申请、电话申请和柜台申请。答：您必须先持有
+                                        招商银行“一卡通”（如没有请先到柜台申请，最好直接让工作人员帮你开通）。 招商银行一卡通
+                                        的客户有3种方式申请支付卡：网上申请、电话申请和柜台申请。 请注意，通过网上申请到支付卡，
+                                        将会有一段“保护期”。保护期期间您只能进行小额支付。通过电话或者柜台申请则没有保护期限制。
+                                        如果您需进行大额支付，请申请开通个人银行专业版，并通过专业版进行支付。 如果网上申请和电话
+                                        申请都失败，可以通过柜台申请。 办理柜台申请，请携带一卡通和开户证件，前往任意招行网点办理。
+                                        申请开通个人银行专业版，也请 携带一卡通和开户证件，前往任意招行网点办理。
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="qa-title">
+                                    <i class="arrow"></i>
+                                    <span>怎么开通招商银行网上银行？</span>
+                                </div>
+                                <div class="answer-wrap"></div>
+                            </li>
+                            <li>
+                                <div class="qa-title">
+                                    <i class="arrow"></i>
+                                    <span>怎么开通招商银行网上银行？</span>
+                                </div>
+                                <div class="answer-wrap"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="Page3" class="gs page-detail-bd">
+                    <div class="question-banner clearfix">
+                        <div class="bank-logo">
+                            <i class="logo zhaoshang"></i>
+                            <p class="service-tel">客服电话：95555</p>
+                        </div>
+                        <div class="bank-control-guide">
+                            <p class="control-tips">【工商银行】使用专业版UKey，最高支持1000万支付额度</p>
+                            <a href="#" class="btn"><i class="ico-check"></i>查看网银操作指南</a>
+                        </div>
+                    </div>
+                    <div class="question-bd">
+                        <ul class="qa-list">
+                            <li>
+                                <div class="qa-title">
+                                    <i class="arrow"></i>
+                                    <span>怎么开通招商银行网上银行？</span>
+                                </div>
+                                <div class="answer-wrap">
+                                    <p class="answer">
+                                        答：您必须先持有招商银行“一卡通”（如没有请先到柜台申请，最好直接让工作人员帮你开通）。
+                                        招商银行一卡通的客户有3种方式申请支付卡：网上申请、电话申请和柜台申请。答：您必须先持有
+                                        招商银行“一卡通”（如没有请先到柜台申请，最好直接让工作人员帮你开通）。 招商银行一卡通
+                                        的客户有3种方式申请支付卡：网上申请、电话申请和柜台申请。 请注意，通过网上申请到支付卡，
+                                        将会有一段“保护期”。保护期期间您只能进行小额支付。通过电话或者柜台申请则没有保护期限制。
+                                        如果您需进行大额支付，请申请开通个人银行专业版，并通过专业版进行支付。 如果网上申请和电话
+                                        申请都失败，可以通过柜台申请。 办理柜台申请，请携带一卡通和开户证件，前往任意招行网点办理。
+                                        申请开通个人银行专业版，也请 携带一卡通和开户证件，前往任意招行网点办理。
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="qa-title">
+                                    <i class="arrow"></i>
+                                    <span>怎么开通招商银行网上银行？</span>
+                                </div>
+                                <div class="answer-wrap">
+                                    <p class="answer">
+                                        答：您必须先持有招商银行“一卡通”（如没有请先到柜台申请，最好直接让工作人员帮你开通）。
+                                        招商银行一卡通的客户有3种方式申请支付卡：网上申请、电话申请和柜台申请。答：您必须先持有
+                                        招商银行“一卡通”（如没有请先到柜台申请，最好直接让工作人员帮你开通）。 招商银行一卡通
+                                        的客户有3种方式申请支付卡：网上申请、电话申请和柜台申请。 请注意，通过网上申请到支付卡，
+                                        将会有一段“保护期”。保护期期间您只能进行小额支付。通过电话或者柜台申请则没有保护期限制。
+                                        如果您需进行大额支付，请申请开通个人银行专业版，并通过专业版进行支付。 如果网上申请和电话
+                                        申请都失败，可以通过柜台申请。 办理柜台申请，请携带一卡通和开户证件，前往任意招行网点办理。
+                                        申请开通个人银行专业版，也请 携带一卡通和开户证件，前往任意招行网点办理。
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="qa-title">
+                                    <i class="arrow"></i>
+                                    <span>怎么开通招商银行网上银行？</span>
+                                </div>
+                                <div class="answer-wrap"></div>
+                            </li>
+                            <li>
+                                <div class="qa-title">
+                                    <i class="arrow"></i>
+                                    <span>怎么开通招商银行网上银行？</span>
+                                </div>
+                                <div class="answer-wrap"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="Page4" class="js page-detail-bd">
+                    <div class="question-banner clearfix">
+                        <div class="bank-logo">
+                            <i class="logo zhaoshang"></i>
+                            <p class="service-tel">客服电话：95555</p>
+                        </div>
+                        <div class="bank-control-guide">
+                            <p class="control-tips">【建设银行】使用专业版UKey，最高支持1000万支付额度</p>
+                            <a href="#" class="btn"><i class="ico-check"></i>查看网银操作指南</a>
+                        </div>
+                    </div>
+                    <div class="question-bd">
+                        <ul class="qa-list">
+                            <li>
+                                <div class="qa-title">
+                                    <i class="arrow"></i>
+                                    <span>怎么开通招商银行网上银行？</span>
+                                </div>
+                                <div class="answer-wrap">
+                                    <p class="answer">
+                                        答：您必须先持有招商银行“一卡通”（如没有请先到柜台申请，最好直接让工作人员帮你开通）。
+                                        招商银行一卡通的客户有3种方式申请支付卡：网上申请、电话申请和柜台申请。答：您必须先持有
+                                        招商银行“一卡通”（如没有请先到柜台申请，最好直接让工作人员帮你开通）。 招商银行一卡通
+                                        的客户有3种方式申请支付卡：网上申请、电话申请和柜台申请。 请注意，通过网上申请到支付卡，
+                                        将会有一段“保护期”。保护期期间您只能进行小额支付。通过电话或者柜台申请则没有保护期限制。
+                                        如果您需进行大额支付，请申请开通个人银行专业版，并通过专业版进行支付。 如果网上申请和电话
+                                        申请都失败，可以通过柜台申请。 办理柜台申请，请携带一卡通和开户证件，前往任意招行网点办理。
+                                        申请开通个人银行专业版，也请 携带一卡通和开户证件，前往任意招行网点办理。
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="qa-title">
+                                    <i class="arrow"></i>
+                                    <span>怎么开通招商银行网上银行？</span>
+                                </div>
+                                <div class="answer-wrap">
+                                    <p class="answer">
+                                        答：您必须先持有招商银行“一卡通”（如没有请先到柜台申请，最好直接让工作人员帮你开通）。
+                                        招商银行一卡通的客户有3种方式申请支付卡：网上申请、电话申请和柜台申请。答：您必须先持有
+                                        招商银行“一卡通”（如没有请先到柜台申请，最好直接让工作人员帮你开通）。 招商银行一卡通
+                                        的客户有3种方式申请支付卡：网上申请、电话申请和柜台申请。 请注意，通过网上申请到支付卡，
+                                        将会有一段“保护期”。保护期期间您只能进行小额支付。通过电话或者柜台申请则没有保护期限制。
+                                        如果您需进行大额支付，请申请开通个人银行专业版，并通过专业版进行支付。 如果网上申请和电话
+                                        申请都失败，可以通过柜台申请。 办理柜台申请，请携带一卡通和开户证件，前往任意招行网点办理。
+                                        申请开通个人银行专业版，也请 携带一卡通和开户证件，前往任意招行网点办理。
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="qa-title">
+                                    <i class="arrow"></i>
+                                    <span>怎么开通招商银行网上银行？</span>
+                                </div>
+                                <div class="answer-wrap"></div>
+                            </li>
+                            <li>
+                                <div class="qa-title">
+                                    <i class="arrow"></i>
+                                    <span>怎么开通招商银行网上银行？</span>
+                                </div>
+                                <div class="answer-wrap"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="page-detail-rt">
+            <div class="contact">
+                <div class="right-side-box">
+                    <div class="side-title-wrap">
+                        <h2>联系客服</h2>
+                    </div>
+                    <ul class="contact-list">
+                        <li class="item-box">
+                            <i class="ico-tel"></i>
+                            <p class="tel">95017</p>
+                        </li>
+                        <li class="item-box">
+                            <i class="ico-clock"></i>
+                            <p class="work-time">工作时间：09：00-22:00</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <div class="wrap clearfix">
+        <div class="about-us clearfix">
+            <i class="i-logo-ct"></i>
+            <div class="rt">
+                <stong>关于理财通</stong>
+                <a href="#">理财通简介</a>
+            </div>
+        </div>
+        <div class="contact-us clearfix">
+            <i class="i-phone"></i>
+            <div class="rt">
+                <strong>联系客服</strong>
+                <span class="lt-line">
+                    "微信用户：9507（拨通后转1再转6）"
+                    <br/>
+                    "QQ用户：86013860（拨通后转4）"
+                </span>
+                <span>工作时间：09:00-22:00</span>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
