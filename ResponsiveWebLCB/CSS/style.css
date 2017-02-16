@@ -177,7 +177,7 @@ ad页面样式
 /***********
 feature页面样式
 ************/
-.feature{width: 90%;margin: 2rem auto;font-size: 0;}
+.feature{width: 90%;margin: 2rem auto;font-size: 0;padding-top: 17px;}
 .feature .item{display: inline-block;width: calc(33.33333% - 1rem);padding: 1rem;font-size: 1.4rem;background-color: white;
 box-shadow: 0 0 4px #ccc;box-sizing: border-box;}
 .feature .item+.item{margin-left: 1.5rem;}
