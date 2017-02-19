@@ -1,0 +1,36 @@
+			#fixed-nav{
+				position: fixed;
+				right: 20px;
+				top: 50%;
+				/*bottom: 0;*/
+				transform: translateY(-50%);
+			}
+			#fixed-nav ul{
+				margin: 0;
+				padding: 0;
+			}
+			#fixed-nav ul li{
+				list-style: none;
+				margin-bottom: 5px;
+				width: 16px;
+				transition: width 2s;
+				overflow: hidden;
+			}
+			#fixed-nav ul:hover .fixed-nav-list{
+				width: 130px;
+			}
+			#fixed-nav ul li a{
+				text-decoration: none;
+				display: block;
+				width: 130px;
+				height: 38px;
+				line-height: 38px;
+ 				padding-left: 16px;
+				color: white;
+				background-color: red;
+				border-radius: 16px;
+				/*transition: width 2s;*/
+			}
+			#fixed-nav ul li a span{
+				
+			}
