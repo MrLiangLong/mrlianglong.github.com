@@ -1,4 +1,5 @@
-.wrap{margin-top: 30px;}
+body{min-width: 1200px;}
+.wrap{margin-top: 0px;}
 .detail-top{background: #ffffff;border:2px solid #f0f0f0;padding: 36px 0 0 36px;padding-bottom: 30px;margin-bottom: 5px;}
 .chart-wrap{float: left;width: 55%;}
 .chart-wrap .chart-nav{width:80%;font-size: 16px;border-bottom: 1px solid #dcdcdc;padding-bottom: 4px;margin-bottom: 10px;}

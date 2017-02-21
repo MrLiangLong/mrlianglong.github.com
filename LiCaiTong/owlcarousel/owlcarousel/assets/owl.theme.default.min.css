@@ -39,7 +39,11 @@
 
 .owl-theme .owl-nav.disabled + .owl-dots {
     margin-top: -26px;
+<<<<<<< HEAD
+    position: relative; }
+=======
     position: relative;}
+>>>>>>> branch 'master' of https://github.com/MrLiangLong/mrlianglong.github.com.git
 
 .owl-theme .owl-dots {
     text-align: center;
@@ -51,7 +55,11 @@
 .owl-theme .owl-dots .owl-dot span {
     width: 16px;
     height: 16px;
+<<<<<<< HEAD
+    margin: 0px 8px;
+=======
     margin: 0px 7px;
+>>>>>>> branch 'master' of https://github.com/MrLiangLong/mrlianglong.github.com.git
     background: #D6D6D6;
     display: block;
     -webkit-backface-visibility: visible;

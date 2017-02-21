@@ -35,18 +35,44 @@
 </head>
 <body>
 <header>
-    <h1 id="logo">
-        <a href="#" ><img src="img/logo.png" alt="logo"></a>
-    </h1>
-    <nav class="main clearfix">
-        <ul>
-            <li><a href="index.html" class="active">首页</a></li>
-            <li><a href="pay.html" >大额转入 <i class="i-balance-add"></i></a></li>
-            <li><a href="help.html">帮助</a></li>
-            <li><a href="login.html"><i class="avatar"></i> 登录</a></li>
-        </ul>
-    </nav>
+    <div class="wrap header-container">
+        <h1 id="logo">
+            <a href="#" ><img src="img/logo.png" alt="logo"></a>
+        </h1>
+        <nav class="main clearfix header-menu">
+            <ul class="header-menu-list clearfix">
+                <li class="header-menu-list-li"><a href="index.html" class="active">首页</a></li>
+                <li class="header-menu-list-li"><a href="pay.html" >大额转入 <i class="i-balance-add"></i></a></li>
+                <li class="header-menu-list-li"><a href="help.html">帮助</a></li>
+                <li class="header-menu-list-li"><a href="login.html"><i class="avatar"></i> 登录</a></li>
+                <li class="header-menu-list-li menu-active-line" style="left:26px;"></li>
+            </ul>
+        </nav>
+    </div>
 </header>
+<script type="text/javascript">
+           $(function(){
+               var _menu =  $('.header-container').find('.header-menu-list');
+               var _currentLeft = $('.header-container').find('.menu-active-line').css('left') || '30px';
+               var _menuLine = _menu.find('.menu-active-line');
+               _menu.find('.header-menu-list-li').hover(function(){
+               var _i = $(this).index();
+               if(_i>=2){
+               	_menuLine.stop().animate({'left':(_i*132+136)+'px' },200);
+               }else{
+               	_menuLine.stop().animate({'left':(_i * 134 + 30)+'px' },200);
+               }
+               },function(){
+               _menuLine.stop().animate({'left':_currentLeft},200);
+               
+ /*              _menu.find('.header-menu-list-li').click(function(){
+               	 $(this).find('a').addClass('active');
+               })
+               */
+    });
+});
+</script>
+
 <div class="login-wrap js-login-wrap">
     <div class="box-mask-notop js-mask hide"></div>
     <div class="login-box">

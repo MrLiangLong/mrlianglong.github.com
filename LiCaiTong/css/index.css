@@ -17,7 +17,7 @@ ul{
 li{
     list-style:none;
 }
-body,html{height: 100%;}
+body,html{min-width:1200px;height: 100%;}
 /* =
 /* ===========
     工具样式
@@ -102,16 +102,22 @@ header样式
 header{width: 100%;height: 6.3rem;background: #ffffff;margin: 0 auto;position: relative;}
 header #logo{float: left;margin-top: 19px;margin-left: 8rem;}
 header #logo img{display: inline-block;vertical-align:top;}
-header .main {float: right;margin-top: 26px;}
-header .main ul{font-size: 0;width: 100%;}
+header .main {float: right;margin-top: 20px;}
+header .main ul{font-size: 0;width: 100%;position: relative;}
 header .main ul li{display: inline-block;margin-right: 3.5rem;}
-header .main ul li a{height: 3.8rem;display:block;font-size: 1.8rem;
+header .main ul li a{height: 3.8rem;display:block;width:100%;font-size: 1.8rem;
     text-align: center;line-height: 3.8rem;padding-left: 2rem;padding-right: 2rem;text-decoration: none;}
-.active{color: #228bff;border-bottom: 3px solid #228bff;font-weight: bold;}
+.active{color: #228bff;/*border-bottom: 3px solid #228bff;*/font-weight: bold;}
 .i-balance-add{width: 71px;height: 24px;display: inline-block;background: url("../img/ico_balance_add_sp.png") no-repeat;
      vertical-align: middle;background-position: 0 -268px;}
 .avatar{width: 2.6rem;height: 2.6rem;background: url("../img/header_default.jpg") no-repeat;display: inline-block;vertical-align: middle;}
-
+header .main ul li.menu-active-line{
+	padding: 0;
+	width: 80px;
+	border: 2px solid #228bff;
+	position: absolute;
+	top:40px;
+}
 /************
 container样式
 *************/
@@ -123,7 +129,7 @@ ad样式
 /************
 index-count样式
 *************/
-.index-count{width: 100%;text-align: center;line-height: 3.8rem;line-height: 3.8rem;background: #ffffff;font-size: 1.6rem;color: #696969;}
+.index-count{width: 100%;padding-top:10px;text-align: center;line-height: 3.8rem;line-height: 3.8rem;background: #ffffff;font-size: 1.6rem;color: #696969;}
 .index-count span{color: red;font-size: 2rem;}
 
 /************
