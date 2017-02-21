@@ -1,9 +1,9 @@
 
 				var navText=[
-					{"text":"变脸小游戏","href":"https://www.baidu.com"},
-					{"text":"响应式网站","href":"https://www.baidu.com"},
-					{"text":"100du电商网站","href":"https://www.baidu.com"},
-					{"text":"WebApp","href":"https://www.baidu.com"}
+					{"text":"个人网站","href":"https://mrlianglong.github.io/PersonWeb"},
+					{"text":"响应式网站","href":"https://mrlianglong.github.io/ResponsiveWebLCB"},
+					{"text":"100du电商网站","href":"https://mrlianglong.github.io/100duShoppingStore"},
+					{"text":"WebApp","href":"https://mrlianglong.github.io/SmallWebApp/"}
 				]
 				var html='';
 				for(var i=0;i<navText.length;i++){
