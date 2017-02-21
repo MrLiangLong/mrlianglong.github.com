@@ -128,3 +128,17 @@ footer p{
 	font-size: 12px;
 	color:  #fdda7c;
 }
+.ad{
+	width: 990px;
+	height: 300px;
+	padding-bottom: 30px;
+}
+.item{
+	display: inline-block;
+	height: 300px;
+	width: 990px;
+}
+.ad .item img{
+	width: 990px;
+	height: 300px;
+}
