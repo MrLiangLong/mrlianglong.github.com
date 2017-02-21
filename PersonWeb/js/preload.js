@@ -147,6 +147,4 @@ function overload(){
     fadeInOut(loadDiv,-5,100,0,function(){
         loadDiv.style.display = "none";
     });
-
-	
 }

@@ -26,9 +26,9 @@
 				height: 38px;
 				line-height: 38px;
  				padding-left: 16px;
-				color: white;
-				background-color: red;
-				border-radius: 16px;
+				background-color: #454545;
+				color:white;
+				/*border-radius: 16px;*/
 				/*transition: width 2s;*/
 			}
 			#fixed-nav ul li a span{
