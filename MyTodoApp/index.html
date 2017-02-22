@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>My Todo App</title>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="lib/datetimepicker/jquery.datetimepicker.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+</head>
+<body>
+<div class="msg" >
+    <span class="msg-content"></span>
+    <span class="anchor confirmed" style="cursor: pointer;color: #999">知道了</span>
+</div>
+<div class="container">  <!--总容器开始-->
+    <h1>我的TODO</h1>
+    <form class="add-task clearfix">
+        <input name="content"
+               type="text"
+               placeholder="e.g.下午记得买菜"
+                autofocus
+                autocomplete="off"/>
+        <button type="submit">submit</button>
+    </form>
+    <div class="task-list"> <!--清单列表开始-->
+        <div class="task-item"><!--任务开始-->
+            <span><input type="checkbox"/></span>
+            <span class="task-content">item content 1</span>
+            <span class="action"> delete</span>
+            <span class="action"> detail</span>
+        </div><!--任务结束-->
+     </div><!--清单类别结束-->
+    <div class="task-detail-mask"></div>
+     <div class="task-detail"><!--任务详情开始-->
+         <!--<div>
+             <div class="content">&lt;!&ndash;任务标题开始&ndash;&gt;
+                 下午记得买菜
+             </div>
+             <div>&lt;!&ndash;任务描述开始&ndash;&gt;
+                 <div class="desc">
+                     <textarea name="" id=""></textarea>
+                 </div>
+             </div>&lt;!&ndash;任务描述结束&ndash;&gt;
+             <div class="remind">&lt;!&ndash;任务定时提醒开始&ndash;&gt;
+                 <input type="date"/>
+                 &lt;!&ndash; <button type="submit">submit</button>&ndash;&gt;
+             </div>&lt;!&ndash;任务定时提醒结束&ndash;&gt;
+         </div>-->
+     </div><!--任务详情结束-->
+
+</div><!--总容器结束-->
+<video class="alerter" src="alert.mp3"></video>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="lib/datetimepicker/jquery.datetimepicker.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/localStorage/2.0.1/localStorage.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/store.js/1.3.20/store.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/json2/20160511/json2.min.js"></script>
+<script src="js/base.js" type="text/javascript"></script>
+</body>
+</html>
