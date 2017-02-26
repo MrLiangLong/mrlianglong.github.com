@@ -1,209 +1,55 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="UTF-8">
 		<title></title>
-		<!--<link rel="stylesheet" href="css/normalize.css" />-->
-		<link rel="stylesheet" type="text/css" href="../fixednav/index.css"/>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/common.css" />
 	</head>
-<!--			<script type="text/javascript">
-			$(window).ready(function() {
-				$('#works li a').each(function(i){
-					index=i;
-					$('#works li a').eq(index).hover(
-						$(this).addClass('active')
-					)
-				})
-			});
-		</script-->
-	<style>
-		body {
-			font-family: 'Segoe UI Light', 'Segoe UI', 'Microsoft Jhenghei', 微软雅黑, sans-serif;
-		}
-		
-		.wrap {
-			height: 600px;
-			width: 100%;
-			padding-bottom: 200px;
-		}
-		
-		#header,
-		.container,
-		.footer {
-			width: 80%;
-			min-width: 800px;
-			margin: 0 auto;
-		}
-		
-		#header {
-			height: 100px;
-			/*background: gray;*/
-		}
-		
-		.namel {
-			width: 80%;
-			border: 1px solid white;
-			padding-left: 15em;
-		}
-		.namel p{
-			width: 45ch;
-			overflow: hidden;
-			border-right: .05em solid;
-			color: black;
-			font-size: 28px;
-			white-space: nowrap;
-			animation: typing 1.2s steps(45),
-			caret 1s steps(1) infinite;
-		}
-		@keyframes typing{
-			from{width: 0;}
-		}
-		@keyframes caret{
-            50%{border-color: transparent;}
-		}
-		.svg-l {
-			stroke-width: 4px;
-			stroke: white;
-			stroke-dasharray: 280 220;
-			fill: none;
-			stroke-dashoffset: -60px;
-		}
-		
-		#works {
-			width: 100%;
-			min-width: 800px;
-		}
-		
-		.works-header,.works-header-h4 {
-			width: 100%;
-			text-align: center;
-			font-weight: normal;
-			word-spacing: 2px;
-		}
-		.works-header{
-			margin: 0;
-			color: #999;
-		}
-		.works-header-h4{
-			margin: 0;
-			padding: 0;
-			color: #000 !important;
-		}
-		.works-header-h4 span{
-			color: red;
-		}
-		#works ul {
-			width: 500px;
-			margin: 0 auto;
-			padding: 0;
-		}
-		
-		#works ul li {
-			list-style: none;
-			text-align: center;
-			line-height: 36px;
-			cursor: pointer;
-			font-size: 20px;
-			background: white;
-			border-radius: 4px;
-		}
-		
-		#works ul li a {
-			display: block;
-			width: 500px;
-			height: 36px;
-			text-decoration: none;
-			color: #5FB7E9;
-			border-radius: 4px;
-		}
-		#works ul li a:hover{
-			color: white;
-			background: #BBD631;
-			transition: background 500ms ease-in-out,color 500ms ease-in-out;
-		}
-/*		.active{
-			animation: changeColor 1s;
-		}
-		@keyframes changeColor{
-			from{
-				background: white;
-			}
-			to{
-				background: #BBD631;
-			}
-		}*/
-		#works h4{
-			text-align: center;
-			color: #999;
-			padding: 6px 0;
-			font-weight: normal;
-		}
-		#footer{
-			height: 100px;
-			text-align: center;
-			color: #000000;
-		}
-		#footer p{
-			font-size: 18px;
-			line-height: 100px;
-			height: 100px;
-		}
-	</style>
-	</head>
-
 	<body>
-		<div class="wrap">
-			<div id="header">
-				<div class="namel">
-					<p>Welcome to my GitHub, my name is LiangZhiRong!</p>
-				</div>
+		<div class="container">
+			<div class="logo">
+				<a href="#">						
+				</a>
 			</div>
-			<div class="container">
-				<div id="works">
-					<h1 class="works-header">Works List</h1>
-					<!--<h4 class="works-header-h4">作品和博客<span>更新中...</span></h4>-->
-					<ul>
-						<h4>-WebSite-</h4>
-						<li>
-							<a href="https://mrlianglong.github.io/PersonWeb">个人网站</a>
-						</li>
-						<li>
-							<a href="https://mrlianglong.github.io/ResponsiveWebLCB">响应式网站-理财宝</a>
-						</li>
-						<li>
-							<a href="https://mrlianglong.github.io/100duShoppingStore">商城首页-100du享乐网</a>
-						</li>
-						<li>
-							<a href="https://mrlianglong.github.io/MyTodoApp">My-Todo</a>
-						</li>
-						<li>
-							<a href="https://mrlianglong.github.io/LiCaiTong">理财通</a>
-						</li>
-						<h4>-Component And Frame-</h4>
-						<li>
-							<a href="https://mrlianglong.github.io/SmallWebApp/">组件化开发webapp-H5</a>
-						</li>
-
-						<li>
-							<a href="https://mrlianglong.github.io/">BootStrap框架作品</a>
-						</li>
-						<h4>-jQuery Demo-</h4>
-						<li>
-							<a href="https://mrlianglong.github.io/SmallWebApp/">变脸小游戏</a>
-						</li>
-
-						<li>
-							<a href="https://mrlianglong.github.io/">21点扑克</a>
-						</li>
-					</ul>
+			<div class="main" id="main2">
+				<div class="header clearfix">
+                    <div class="nav-btn" id="nav_btn">              
+                    		<img src="images/btn.png" alt="" />
+                    </div>					
 				</div>
+				<div class="wrap">
+					<div class="item on" >
+						<div class="list " style="left: 0%;">
+							<a href="#">
+								<div class="title">18</div>
+								<div class="content">
+									<p class="content-day">2015.04</p>
+									<p class="content-name">Important Explanstion</p>
+									<p class="content-class">News+</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="item avatar">
+						<div class="list">
+							<a href="#"></a>
+						</div>
+					</div>
 			</div>
-		    <div id="footer">
-		    	<p>Stary Hungry，Stary Foolish!</p>
-		    </div>
-		</div>
-    <script type="text/javascript" src="../fixednav/fixedNav.js"></script>
+			</div>
+			<div class="navbar">
+				<a href="#" class="close-menu"></a>
+				<ul>
+					<li><a href="#" class="m_icon_1 cur"></a></li>
+					<li><a href="#" class="m_icon_2"></a></li>
+					<li><a href="#" class="m_icon_3"></a></li>
+					<li><a href="#" class="m_icon_4"></a></li>
+					<li><a href="#" class="m_icon_5"></a></li>
+					<li><a href="#" class="m_icon_6"></a></li>
+				</ul>
+			</div>				
+		</div>		
+		<script src="js/lib/jquery-1.10.1.min.js"></script>
+		<script src="js/main.js"></script>
 	</body>
-
 </html>
