@@ -7,9 +7,12 @@
 				{title:'5',day:'2015.04',name:'响应式-理财宝',conclass:'响应式布局',href:'https://mrlianglong.github.io/ResponsiveWebLCB/'},
 				{title:'6',day:'2015.04',name:'换脸小游戏',conclass:'jQueryDemo',href:'https://mrlianglong.github.io/jQueryDemo/TheGameOfChangeFace'},
 				{title:'7',day:'2015.04',name:'21点扑克',conclass:'jQueryDemo',href:'https://mrlianglong.github.io/jQueryDemo/TheGameOf21PointPoker'},
-				{title:'1',day:'2015.04',name:'理财通网站',conclass:'综合项目',href:'https://mrlianglong.github.io/LiCaiTong/'},
-				{title:'8',day:'2015.04',name:'Important Explanstion',conclass:'News+',href:'#'},
-				{title:'9',day:'2015.04',name:'Important Explanstion',conclass:'News+',href:'#'}
+				{title:'8',day:'2015.04',name:'理财通网站',conclass:'综合项目',href:'https://mrlianglong.github.io/LiCaiTong/'},
+				{title:'0',day:'2015.04',name:'作品正在酝酿中',conclass:'News+',href:'#'},
+				{title:'0',day:'2015.04',name:'作品正在酝酿中',conclass:'News+',href:'#'},
+				{title:'0',day:'2015.04',name:'作品正在酝酿中',conclass:'News+',href:'#'},
+				{title:'0',day:'2015.04',name:'作品正在酝酿中',conclass:'News+',href:'#'},
+				{title:'0',day:'2015.04',name:'作品正在酝酿中',conclass:'News+',href:'#'}
 				];
 								
 				init(arr);
