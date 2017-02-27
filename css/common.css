@@ -18,6 +18,7 @@ body{
 	padding: 0;
 	margin: 0;
 	background: url(../images/bg.gif) repeat #212121;
+	
 }
 .clearfix:after{
 	content: '';
@@ -34,6 +35,7 @@ body{
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+	min-width: 1000px;
 }
 .main{
 	position: absolute;
