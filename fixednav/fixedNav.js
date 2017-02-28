@@ -1,9 +1,9 @@
 
 				var navText=[
-					{"text":"个人网站","href":"https://mrlianglong.github.io/PersonWeb"},
-					{"text":"响应式网站","href":"https://mrlianglong.github.io/ResponsiveWebLCB"},
-					{"text":"100du电商网站","href":"https://mrlianglong.github.io/100duShoppingStore"},
-					{"text":"WebApp","href":"https://mrlianglong.github.io/SmallWebApp/"}
+					{"text":"首页","href":"https://mrlianglong.github.io"},
+					{"text":"个人网站","href":"https://mrlianglong.github.io/PersonWeb/"},
+					{"text":"100du商城","href":"https://mrlianglong.github.io/100duShoppingStore/"},
+					{"text":"理财宝","href":"https://mrlianglong.github.io/ResponsiveWebLCB/"}
 				]
 				var html='';
 				for(var i=0;i<navText.length;i++){
