@@ -146,5 +146,6 @@ function overload(){
 	//loadDiv.style.display = "none";
     fadeInOut(loadDiv,-5,100,0,function(){
         loadDiv.style.display = "none";
+        document.body.style.paddingTop='0';
     });
 }

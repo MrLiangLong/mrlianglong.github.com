@@ -1,4 +1,4 @@
-.loadDiv{ width: 100%; background: url(../images/banner/w_bg.jpg); position: fixed; z-index: 999; left: 0; top: 0; opacity: 1;}
+.loadDiv{ width: 100%; background: url(../images/banner/w_bg.jpg); position: absolute; z-index: 999; left: 0; top: 0; opacity: 1;}
 .load{ width: 200px; height: 100px; position: absolute; left: 50%; margin-left: -100px; top: 50%; text-align: center;}
 .load span{  color: #fff; font-size: 30px; }
 .load_line{ width: 200px; height: 20px; border-radius: 10px; background: #fff; margin-bottom: 20px; overflow: hidden;}
