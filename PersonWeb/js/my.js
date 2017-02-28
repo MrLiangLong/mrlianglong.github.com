@@ -1,4 +1,4 @@
-var oNav = document.getElementById("nav");//导航  
+var oNav = document.getElementById("nav");//导航
 var aLink = oNav.getElementsByTagName("a");
 var aSpan = oNav.getElementsByTagName("span");
 var num = 0;
@@ -220,6 +220,11 @@ function auto(){
     banner.timer = setInterval(toNext,2500);
 }
 
+/*window.onfocus=auto;*/
+/*window.onblur=function(){
+	clearInterval(banner.timer);
+}*/
+
 auto();
 
 banner.onmouseover = function(){
@@ -287,24 +292,24 @@ var aWorkNav = work_nav.getElementsByTagName("a");
 
 var arr_text1 = [
 
-    { href: "http://nb.vanke.com",src:"images/work/1.png",title:"响应式-理财通"},
-    { href: "http://www.gzbzygs.com",src:"images/work/2.png",title:"组件化-H5"},
-    { href: "http://wh.vanke.com/HankouLegend/index.shtml",src:"images/work/3.png",title:"BootStrap-浏览器首页"},
-    { href: "http://www.fxyhkj.com.cn",src:"images/work/4.png",title:"DivCss-100du"},
-    { href: "http://www.1juke.cn/jukebaoweb/index.shtml",src:"images/work/5.png",title:"jQuery-变脸小游戏"}
+    { href: "https://mrlianglong.github.io/ResponsiveWebLCB/",src:"images/work/1.png",title:"响应式-理财宝"},
+    { href: "https://mrlianglong.github.io/100duShoppingStore/",src:"images/work/2.png",title:"100度电商网站首页"},
+    { href: "https://mrlianglong.github.io/MyTodoApp/",src:"images/work/3.png",title:"MyTodo小应用"},
+    { href: "https://mrlianglong.github.io/jQueryDemo/TheGameOfChangeFace",src:"images/work/4.png",title:"换脸小游戏"},
+    { href: "https://mrlianglong.github.io/LiCaiTong/",src:"images/work/5.png",title:"理财通网站"}
 
 ]
 
 var arr_text2 = [
 
-    { href: "http://wx.juzhen.net/2014/super2014/index.shtml",src1:"images/work/w1.png",src2:"images/work/e1.png",title:"安徽卫视超级笑星"},
-    { href: "http://wxc.juzhen.net/html/index.shtml",src1:"images/work/w2.png",src2:"images/work/e2.png",title:"青岛万象城"},
-    { href: "http://wx.juzhen.net/2014/love2014/index.shtml",src1:"images/work/w3.png",src2:"images/work/e3.png",title:"深圳万科-相信爱"},
-    { href: "http://wxc.juzhen.net/2014/green2014/index.shtml",src1:"images/work/w4.png",src2:"images/work/e4.png",title:"万象城-骑行"},
-    { href: "http://wx.juzhen.net/2014/thanks2014/index.shtml",src1:"images/work/w5.png",src2:"images/work/e5.png",title:"万达感恩节"},
-    { href: "http://shimaoyun.juzhen.com/2014/zhuanpan/index.shtml",src1:"images/work/w6.png",src2:"images/work/e6.png",title:"世茂外滩大转盘"},
-    { href: "http://wx.juzhen.net/2014/zhfc/index.shtml",src1:"images/work/w7.png",src2:"images/work/e7.png",title:"中航紫金云熙"},
-    { href: "http://wx.juzhen.net/2015/bella2015/index.shtml",src1:"images/work/w8.png",src2:"images/work/e8.png",title:"姚贝娜，一路走好"}
+    { href: "#",src1:"images/work/w1.png",src2:"images/work/e1.png",title:"正在整理中..."},
+    { href: "#",src1:"images/work/w2.png",src2:"images/work/e2.png",title:"正在整理中..."},
+    { href: "#",src1:"images/work/w3.png",src2:"images/work/e3.png",title:"正在整理中..."},
+    { href: "#",src1:"images/work/w4.png",src2:"images/work/e4.png",title:"正在整理中..."},
+    { href: "#",src1:"images/work/w5.png",src2:"images/work/e5.png",title:"正在整理中..."},
+    { href: "#",src1:"images/work/w6.png",src2:"images/work/e6.png",title:"正在整理中..."},
+    { href: "#",src1:"images/work/w7.png",src2:"images/work/e7.png",title:"正在整理中..."},
+    { href: "#",src1:"images/work/w8.png",src2:"images/work/e8.png",title:"正在整理中..."}
 ]
 
 var html_1 = '';

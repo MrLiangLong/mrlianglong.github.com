@@ -18,14 +18,12 @@ function shake(obj,attr,fn){
 	},30)
 	
 }
-
 //封装getZero()
 function getZero(n){
 
 	return n<10?"0"+n:""+n;
 
 }
-
 //封装doMove()
 function doMove(obj,attr,speed,target,fn){
 
