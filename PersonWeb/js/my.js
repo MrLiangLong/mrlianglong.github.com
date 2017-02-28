@@ -302,7 +302,7 @@ var arr_text1 = [
 
 var arr_text2 = [
 
-    { href: "#",src1:"images/work/w1.png",src2:"images/work/e1.png",title:"正在整理中..."},
+    { href: "#",src1:"images/work/w1.png",src2:"images/work/e1.png",title:"H5-请扫二维码"},
     { href: "#",src1:"images/work/w2.png",src2:"images/work/e2.png",title:"正在整理中..."},
     { href: "#",src1:"images/work/w3.png",src2:"images/work/e3.png",title:"正在整理中..."},
     { href: "#",src1:"images/work/w4.png",src2:"images/work/e4.png",title:"正在整理中..."},
