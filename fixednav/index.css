@@ -9,7 +9,6 @@
 				-webkit-transform: translateY(-50%);
 				-moz-transform: translateY(-50%);
 				-moz-transform: translateY(-50%);			
-				z-index: 9999;
 			}
 			.rFixedBar-item{
 				position: relative;
@@ -28,10 +27,7 @@
 				height: 35px;
 				background: #666;
 				line-height: 35px;
-				text-align: center;
-				
-				
-				
+				text-align: center;				
 			}
 			.rFixedBar-name{
 				z-index: 1;
@@ -41,7 +37,7 @@
 				top: 0;
 				color: white;
 				background-color: #c81623;
-				width: 110px;
+				width: 118px;
 				height: 35px;
 				font-size: 14px;
 				border-radius: 4px;
@@ -52,7 +48,7 @@
 			}
 			.rFixedBar-item:hover .rFixedBar-name{
 				/*background: #C81623;*/
-				left: -114px;								
+				left: -112px;								
 			}
 			.rFixedBar-item:hover .rFixedBar-icon{
 				background: #C81623;
