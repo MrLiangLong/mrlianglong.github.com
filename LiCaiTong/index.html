@@ -13,40 +13,7 @@
 <style type="text/css">
 	body{min-width: 1200px;}
 </style>
-<script type="text/javascript">
-    window.onload=window.onresize=function(){
-        var aTitle=document.getElementsByClassName("tb1-title");
-        var aCont=document.getElementsByClassName("tb1-cont");
-        for(var i=0;i<aTitle.length;i++){
-            if(aTitle[i].clientHeight<aCont[i].clientHeight){
-                aTitle[i].style.height=aCont[i].clientHeight+"px";
-                /*aTitle[i].style.background='gray';*/
-            }else{
-                aCont[i].style.height=aTitle[i].clientHeight+"px";
-                /*aCont[i].style.background='gray';*/
-            }
-        }
 
-        var top=($(window).height()-$("#zoneMoreBox").height())/2;
-        var left=($(window).width()-$("#zoneMoreBox").width())/2;
-
-        /***///*//**//*随着滚轮的滚动，div仍居屏幕中*//**//**//**//*
-        /*$(window).scroll(function(){*/
-            var scrollTop=$(document).scrollTop();
-            var scrollLeft=$(document).scrollLeft();
-            /*$("#zoneMoreBox").css({position: 'fixed','top':top+scrollTop,'left':left+scrollLeft})*/
-        /*});*/
-        $("#zoneMore").click(function(){
-            $("#zoneMoreBox").css({display:'block',position: 'fixed','top':top+scrollTop,'left':left+scrollLeft});
-            $("#box-task").css({display:'block',"width":$(document).width(),"height":$(document).height()});
-        });
-        $("#close").click(function(){
-            $("#zoneMoreBox").css({display:'none'});
-            $("#box-task").css({display:'none'});
-        })
-    }
-
-</script>
 <body>
 <header>
     <div class="wrap header-container">
@@ -835,6 +802,38 @@
 
 </footer>
 <script src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript">
+  (function(){
+        var aTitle=document.getElementsByClassName("tb1-title");
+        var aCont=document.getElementsByClassName("tb1-cont");
+        for(var i=0;i<aTitle.length;i++){
+            if(aTitle[i].clientHeight<aCont[i].clientHeight){
+                aTitle[i].style.height=aCont[i].clientHeight+"px";
+                /*aTitle[i].style.background='gray';*/
+            }else{
+                aCont[i].style.height=aTitle[i].clientHeight+"px";
+                /*aCont[i].style.background='gray';*/
+            }
+        }
+       var top=($(window).height()-$("#zoneMoreBox").height())/2;
+        var left=($(window).width()-$("#zoneMoreBox").width())/2;
+
+        /***///*//**//*随着滚轮的滚动，div仍居屏幕中*//**//**//**//*
+        /*$(window).scroll(function(){*/
+            var scrollTop=$(document).scrollTop();
+            var scrollLeft=$(document).scrollLeft();
+            /*$("#zoneMoreBox").css({position: 'fixed','top':top+scrollTop,'left':left+scrollLeft})*/
+        /*);*/
+        $("#zoneMore").click(function(){
+            $("#zoneMoreBox").css({display:'block',position: 'fixed','top':top+scrollTop,'left':left+scrollLeft});
+            $("#box-task").css({display:'block',"width":$(document).width(),"height":$(document).height()});
+        });
+        $("#close").click(function(){
+            $("#zoneMoreBox").css({display:'none'});
+            $("#box-task").css({display:'none'});
+        })
+    })();
+</script>
 <script src="owlcarousel/vendors/jquery.min.js"></script>
 <script src="owlcarousel/owlcarousel/owl.carousel.min.js"></script>
 <script src="owlcarousel/vendors/picture.min.js"></script>
