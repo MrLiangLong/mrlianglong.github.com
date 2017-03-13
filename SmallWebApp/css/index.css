@@ -1,11 +1,28 @@
         body{
             padding: 0;
             margin: 0;
+            text-align: center;
         }
         .h5_page{
             background-image: url("../imgs/page_bg.png");
-            max-width: 400px;
-            margin-left: 300px;
+        }
+        @media only screen and (min-width:600px ) {
+        	.h5_page{
+        		max-width: 400px;
+        		margin-left: 300px;
+        	}
+
+        }
+        @media only screen and (max-width:599px ) {
+        	.h5_page{
+        		width: 100%;
+        	}
+        	#erwei{
+        		display: none;
+        	}
+        	#rFixedBar{
+        		display: none;
+        	}
         }
         .h5_page_face{
             background-image: url("../imgs/face_bg.png");
