@@ -18,6 +18,9 @@ li{
     list-style:none;
 }
 body,html{min-width:1200px;height: 100%;}
+a{
+	cursor: pointer;
+}
 /* =
 /* ===========
     工具样式
