@@ -15,10 +15,13 @@ window.onload=function(){
 	var oInDevelop=document.getElementById('inDevelop');
 	var aDialogInDevelep=document.getElementsByClassName('dialog-in-develep');
 	var oDialogInDevelepClose=document.getElementById("inDevelop-close");
-	console.log(oDialogInDevelepClose);
 	for(var i=0;i<aDialogInDevelep.length;i++){
 		aDialogInDevelep[i].onclick=function(){
 			oInDevelop.style.display='block';
+			var timer;
+			timer=setTimeout(function(){
+	 			oInDevelop.style.display='none';
+	 		},600)
 		}
 	}
      oDialogInDevelepClose.onmousemove=function(){
@@ -31,6 +34,7 @@ window.onload=function(){
 	 oDialogInDevelepClose.onclick=function(){
 	 	oInDevelop.style.display='none';
 	 }
+	 
 /*	document.onclick=function(){
 		var oInDevelop=document.getElementById('inDevelop');
 		console.log(oInDevelop);
