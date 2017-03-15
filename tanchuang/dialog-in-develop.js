@@ -21,7 +21,7 @@ window.onload=function(){
 			var timer;
 			timer=setTimeout(function(){
 	 			oInDevelop.style.display='none';
-	 		},600)
+	 		},1000)
 		}
 	}
      oDialogInDevelepClose.onmousemove=function(){
